@@ -1,5 +1,5 @@
 /*
- *     Copyright 2024 The CNAI Authors
+ *     Copyright 2024 The CNCF ModelPack Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,15 +17,59 @@
 package v1
 
 const (
-	// ArtifactTypeModelManifest specifies the media type for a model manifest.
-	ArtifactTypeModelManifest = "application/vnd.cnai.model.manifest.v1+json"
+	// ArtifactTypeModelManifest specifies the artifact type for a model manifest.
+	ArtifactTypeModelManifest = "application/vnd.cncf.model.manifest.v1+json"
 )
 
 const (
-	// ArtifactTypeModelLayer is the media type used for layers referenced by the manifest.
-	ArtifactTypeModelLayer = "application/vnd.cnai.model.layer.v1.tar"
+	// MediaTypeModelConfig specifies the media type for a model configuration.
+	MediaTypeModelConfig = "application/vnd.cncf.model.config.v1+json"
 
-	// ArtifactTypeModelLayerGzip is the media type used for gzipped layers
-	// referenced by the manifest.
-	ArtifactTypeModelLayerGzip = "application/vnd.cnai.model.layer.v1.tar+gzip"
+	// MediaTypeModelWeightRaw is the media type used for an unarchived, uncompressed model weights.
+	MediaTypeModelWeightRaw = "application/vnd.cncf.model.weight.v1"
+
+	// MediaTypeModelWeight is the media type used for model weights.
+	MediaTypeModelWeight = "application/vnd.cncf.model.weight.v1.tar"
+
+	// MediaTypeModelWeightGzip is the media type used for gzipped model weights.
+	MediaTypeModelWeightGzip = "application/vnd.cncf.model.weight.v1.tar+gzip"
+
+	// MediaTypeModelWeightZstd is the media type used for zstd compressed model weights.
+	MediaTypeModelWeightZstd = "application/vnd.cncf.model.weight.v1.tar+zstd"
+
+	// MediaTypeModelConfig specifies the media type for configuration of the model weights, including files like `tokenizer.json`, `config.json`, etc.
+	MediaTypeModelWeightConfig = "application/vnd.cncf.model.weight.config.v1.tar"
+
+	// MediaTypeModelConfigGzip specifies the media type for gzipped configuration of the model weights, including files like `tokenizer.json`, `config.json`, etc.
+	MediaTypeModelWeightConfigGzip = "application/vnd.cncf.model.weight.config.v1.tar+gzip"
+
+	// MediaTypeModelConfigZstd specifies the media type for zstd compressed configuration of the model weights, including files like `tokenizer.json`, `config.json`, etc.
+	MediaTypeModelWeightConfigZstd = "application/vnd.cncf.model.weight.config.v1.tar+zstd"
+
+	// MediaTypeModelDoc specifies the media type for model documentation, including documentation files like `README.md`, `LICENSE`, etc.
+	MediaTypeModelDoc = "application/vnd.cncf.model.doc.v1.tar"
+
+	// MediaTypeModelDocGzip specifies the media type for gzipped model documentation, including documentation files like `README.md`, `LICENSE`, etc.
+	MediaTypeModelDocGzip = "application/vnd.cncf.model.doc.v1.tar+gzip"
+
+	// MediaTypeModelDocZstd specifies the media type for zstd compressed model documentation, including documentation files like `README.md`, `LICENSE`, etc.
+	MediaTypeModelDocZstd = "application/vnd.cncf.model.doc.v1.tar+zstd"
+
+	// MediaTypeModelCode specifies the media type for model code, including code artifacts like scripts, code files etc.
+	MediaTypeModelCode = "application/vnd.cncf.model.code.v1.tar"
+
+	// MediaTypeModelCodeGzip specifies the media type for gzipped model code, including code artifacts like scripts, code files etc.
+	MediaTypeModelCodeGzip = "application/vnd.cncf.model.code.v1.tar+gzip"
+
+	// MediaTypeModelCodeZstd specifies the media type for zstd compressed model code, including code artifacts like scripts, code files etc.
+	MediaTypeModelCodeZstd = "application/vnd.cncf.model.code.v1.tar+zstd"
+
+	// MediaTypeModelDataset specifies the media type for model datasets, including datasets that may be needed throughout the lifecycle of AI/ML models.
+	MediaTypeModelDataset = "application/vnd.cncf.model.dataset.v1.tar"
+
+	// MediaTypeModelDatasetGzip specifies the media type for gzipped model datasets, including datasets that may be needed throughout the lifecycle of AI/ML models.
+	MediaTypeModelDatasetGzip = "application/vnd.cncf.model.dataset.v1.tar+gzip"
+
+	// MediaTypeModelDatasetZstd specifies the media type for zstd compressed model datasets, including datasets that may be needed throughout the lifecycle of AI/ML models.
+	MediaTypeModelDatasetZstd = "application/vnd.cncf.model.dataset.v1.tar+zstd"
 )
